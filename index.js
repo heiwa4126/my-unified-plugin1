@@ -16,7 +16,9 @@ export default function retextSentenceSpacing() {
 
 const processor = unified()
   .use(remarkParse) // markdownを読み込み
+  // 自前のremark pluginを書く
   .use(remarkRehype) // rehypeに変換
+  // 自前のremhype pluginを書く
   .use(rehypeStringify); // rehypeを文字列化
 
 processor.process(readSync("example.md")).then(
