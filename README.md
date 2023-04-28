@@ -18,6 +18,27 @@ node index.js
 
 で実行
 
+## メモ : オプション
+
+プラグインのオプションは
+
+```javascript
+export default function remarkGfm(options = {}) {
+  //...
+}
+```
+
+のように定義して
+
+```javascript
+.use(remarkGfm, {singleTilde: false})
+```
+
+のように使うらしい。
+
+- [remark-gfm - npm](https://www.npmjs.com/package/remark-gfm#unifieduseremarkgfm-options)
+- [remark\-gfm/index\.js at main · remarkjs/remark\-gfm](https://github.com/remarkjs/remark-gfm/blob/main/index.js#L15)
+
 ## TODO
 
 いまのところ、不要なモジュールが package.json にあるので、最後にきれいにすること。
